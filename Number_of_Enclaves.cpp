@@ -20,7 +20,7 @@ int Count_Enclave(vector<vector<int>>& Enclave)
 {
     int n = Enclave.size();
     int m = Enclave[0].size();
-    vector<vector<int>>vis(n,<vector<int>(m,0));
+    vector<vector<int>>vis(n,<vector<int>>(m,0));
     for (int i = 0; i < n; i++)
     {
         for (int j = 0; j < m; j++)
