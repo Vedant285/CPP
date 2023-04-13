@@ -20,7 +20,7 @@ int Count_Enclave(vector<vector<int>>& Enclave)
 {
     int n = Enclave.size();
     int m = Enclave[0].size();
-    vector<vector<int>>vis(n,<vector<int>>(m,0));
+    vector<vector<int>>vis(n,vector<int>(m,0));
     for (int i = 0; i < n; i++)
     {
         for (int j = 0; j < m; j++)
@@ -50,11 +50,11 @@ int main()
     int row, col;
     cout << "Enter Row And Column of  zero Indexed Graph" << endl;
     cin >> row >> col;
-    vector<vector<int>>Enclave(row,<vector<int>(column));
-    cout << "Enter Elements (0,1 only)" << end;
-    for (int i = 0; i < n; i++)
+    vector<vector<int>>Enclave(row,vector<int>(col));
+    cout << "Enter Elements (0,1 only)" << endl;
+    for (int i = 0; i < row; i++)
     {
-        for (int j = 0; j < m; j++)
+        for (int j = 0; j < col; j++)
         {
 
             cin >> Enclave[i][j];
