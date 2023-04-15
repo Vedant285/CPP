@@ -33,7 +33,7 @@ void merge(int arr[],int low,int high)
 {
     if(low<high)
     {
-        int mid=(low+high)/2;
+        int mid=low + (high-low)/2;
         merge(arr,low,mid);
         merge(arr,mid+1,high);
         mergesort(arr,low,mid,high);
@@ -41,9 +41,17 @@ void merge(int arr[],int low,int high)
 }
 int main()
 {
-    int arr[]={9,3,6,2,88,55,99,66};
-    merge(arr,0,8);
-    for(int i=0;i<8;i++)
+    int n;
+    cout<<"Enter size of Array"<<endl;
+    cin>>n;
+    cout<<"Enter elements of array"<<endl;
+    int arr[n];
+    for(int i=0;i<n;i++)
+    {
+        cin>>arr[i];
+    }
+    merge(arr,0,n-1);
+    for(int i=0;i<n;i++)
     {
         cout<<arr[i]<<" ";
     }
