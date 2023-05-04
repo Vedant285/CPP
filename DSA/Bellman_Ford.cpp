@@ -44,7 +44,9 @@ int main()
     {
         int u, v, w;
         cin >> u >> v >> w;
-        edges[i] = {u, v, w};
+        edges[i][0] u;
+        edges[i][1]=v;
+        edges[i][2]=w;
     }
     int s = 0;
     solution obj;
